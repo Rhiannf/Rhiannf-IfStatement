@@ -18,8 +18,12 @@ public class IfStatementTest {
         boolean bool = true;
         int x = 0;
         int y = 1;
-        int expected = 0;
+        int expected = 1;
         int actual = is.ifExample(bool, x, y);
+        Assert.assertEquals(expected, actual);
+    }
+
+    private void extracted(int expected, int actual) {
         Assert.assertEquals(expected, actual);
     }
     /**
@@ -32,6 +36,6 @@ public class IfStatementTest {
         int y = 1;
         int expected = 1;
         int actual = is.ifExample(bool, x, y);
-        Assert.assertEquals(expected, actual);
+        extracted(expected, actual);
     }
 }
